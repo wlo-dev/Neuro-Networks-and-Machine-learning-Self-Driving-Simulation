@@ -15,7 +15,7 @@ class Road {
 
     }
 
-}
+
 
     draw(ctx){
         ctx.linewidth=5;
@@ -32,3 +32,4 @@ class Road {
         ctx.lineTo(this.right,this.bottom);
         ctx.stroke();
     }
+}

@@ -11,6 +11,24 @@ class Road {
 
         const infinity=1000000;
         this.top=-infinity;
+        this.bottom=infinity;
 
     }
+
 }
+
+    draw(ctx){
+        ctx.linewidth=5;
+        ctx.strokeStyle="white";
+
+        ctx.beginPath();
+        ctx.moveTo(This.left,this.top);
+        ctx.lineTo(this.left,this.bottom);
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.moveTo(This.right,this.top);
+        ctx.lineTo(this.right,this.bottom);
+        ctx.stroke();
+    }

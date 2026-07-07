@@ -17,24 +17,22 @@ class Road {
 
 
 
-    draw(ctx){
-        ctx.lineWidth=5;
-        ctx.strokeStyle="white";
+   draw(ctx){
+    ctx.lineWidth=5;
+    ctx.strokeStyle="white";
 
-        for(let i=0;i<=this.laneCount;i++){
-            const x=lerp(
-                this.left,
-                this.right,
-                i/this.laneCount
-            );
-            ctx.beginPath();
-            ctx.moveTo(x,this.top);
-            ctx.lineTo(x,this.bottom);
-            ctx.stroke();
-        }
+    for(let i=0;i<=this.laneCount;i++){
+        const x=lerp(
+            this.left,
+            this.right,
+            i/this.laneCount
+        );
+
+        ctx.beginPath();
+        ctx.moveTo(x,this.top);
+        ctx.lineTo(x,this.bottom);
+        ctx.stroke();
     }
 }
-
-function lerp(A,B,t){
-    return A+(B-A) *t;
 }
+

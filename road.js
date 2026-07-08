@@ -15,7 +15,10 @@ class Road {
 
     }
 
-
+getLaneCenter(laneIndex){
+    const laneWidth=this.width/this.laneCount;
+    return this.left+linewidth/2+laneIndex*lineWidth;
+}
 
    draw(ctx){
     ctx.lineWidth=5;
@@ -30,7 +33,7 @@ class Road {
 
         if(i>0 && i<this.laneCount){
             ctx.setLineDash([20,20]);
-        }else{
+        }else{r
             ctx.setLineDash([]);
         }
 
